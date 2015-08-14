@@ -12,6 +12,8 @@ makeCacheMatrix <- function(x = matrix()) {
         returnInverted <- TRUE
         set <- function(y) {
                 x <<- y
+                # reset state values
+                returnInverted <<- TRUE
                 i <<- NULL
         }
         get <- function() x
